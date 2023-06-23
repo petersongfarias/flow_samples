@@ -3,13 +3,8 @@ package br.com.flowsample
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import br.com.flowsample.ui.nav.ComposeNavGraph
+import br.com.flowsample.ui.screens.ScreenBody
 import br.com.flowsample.ui.theme.FlowSampleTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,30 +12,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             FlowSampleTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background,
-                ) {
-                    Greeting("Android")
+                ScreenBody(topBarTitle = "Flow Samples") {
+                    ComposeNavGraph()
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier,
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    FlowSampleTheme {
-        Greeting("Android")
     }
 }

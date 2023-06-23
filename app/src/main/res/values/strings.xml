@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">flowSample</string>
+    <string name="flowSample1">Flow vs SharedFlow</string>
+    <string name="flowSample2">CouldFlow vs HotFlow</string>
+    <string name="flowSample3">Flow Functions</string>
+    <string name="execute">Executar</string>
+
 </resources>
